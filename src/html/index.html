@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="WebApp">
+<head>
+    <base href="/">
+    <meta charset="utf-8" />
+    <title ng-bind="title">WebApp</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/app.min.css?body=1" />
+    <link rel="stylesheet" href="css/responsive.min.css" />
+    <script src="js/app.min.js"></script>
+</head>
+<body ng-controller="MainController" class="bgf page-on-load">
+
+<div ng-spinner-bar class="page-spinner-bar" ng-class="{hide: !loading}">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+</div>
+<!-- END PAGE SPINNER -->
+<div ng-class="{loading: loading}" style="height: 100%; overflow-y: auto;">
+    <ng-view class="view-frame">
+    </ng-view>
+</div>
+</body>
+</html>
